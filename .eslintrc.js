@@ -1,22 +1,26 @@
 module.exports = {
   /* your base configuration of choice */
-  extends: 'eslint:recommended',
+  extends: ["eslint:recommended", "plugin:prettier/recommended"],
 
-  parser: 'babel-eslint',
+  parser: "babel-eslint",
+
   parserOptions: {
-    sourceType: 'module'
+    sourceType: "module"
   },
+
   env: {
     browser: true,
     node: true
   },
+
   globals: {
     __static: true
   },
-  plugins: [
-    'html'
-  ],
+
+  plugins: ["html", "prettier"],
+
   rules: {
-    "no-console": "off"
+    "no-console": "off",
+    "prettier/prettier": "error"
   }
-}
+};
