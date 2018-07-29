@@ -32,33 +32,32 @@
 </template>
 
 <script>
-  export default {
-    name: "LayoutDefault",
-    data: () => ({
-      drawer: true,
-      maximized: false
-    }),
-    props: {
-      source: String
+export default {
+  name: "LayoutDefault",
+  data: () => ({
+    drawer: true,
+    maximized: false
+  }),
+  props: {
+    source: String
+  },
+  methods: {
+    minimize() {
+      this.$electron.remote.BrowserWindow.getFocusedWindow().minimize();
     },
-    methods: {
-      minimize () {
-        this.$electron.remote.BrowserWindow.getFocusedWindow().minimize();
-      },
-      fullscreen () {
-        this.$electron.remote.BrowserWindow.getFocusedWindow().maximize();
-        this.maximized = true;
-      },
-      fullscreenExit () {
-        this.$electron.remote.BrowserWindow.getFocusedWindow().unmaximize();
-        this.maximized = false;
-      },
-      close () {
-        this.$electron.remote.BrowserWindow.getFocusedWindow().close();
-
-      }
+    fullscreen() {
+      this.$electron.remote.BrowserWindow.getFocusedWindow().maximize();
+      this.maximized = true;
+    },
+    fullscreenExit() {
+      this.$electron.remote.BrowserWindow.getFocusedWindow().unmaximize();
+      this.maximized = false;
+    },
+    close() {
+      this.$electron.remote.BrowserWindow.getFocusedWindow().close();
     }
   }
+};
 </script>
 
 <style scoped lang="stylus">

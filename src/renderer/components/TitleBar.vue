@@ -10,9 +10,9 @@
 </template>
 
 <script>
-  export default {
-    name: "TitleBar",
-  }
+export default {
+  name: "TitleBar"
+};
 </script>
 
 <style scoped lang="stylus">

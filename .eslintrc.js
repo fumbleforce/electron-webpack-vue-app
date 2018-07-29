@@ -1,10 +1,15 @@
 module.exports = {
   /* your base configuration of choice */
-  extends: ["eslint:recommended", "plugin:prettier/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:vue/base"
+  ],
 
-  parser: "babel-eslint",
+  parser: "vue-eslint-parser",
 
   parserOptions: {
+    parser: "babel-eslint",
     sourceType: "module"
   },
 
@@ -17,7 +22,7 @@ module.exports = {
     __static: true
   },
 
-  plugins: ["html", "prettier"],
+  plugins: ["vue", "prettier"],
 
   rules: {
     "no-console": "off",

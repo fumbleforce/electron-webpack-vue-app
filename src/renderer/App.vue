@@ -4,13 +4,13 @@
 </template>
 
 <script>
-  import TitleBar from "./components/TitleBar"
-  export default {
-    name: 'app',
-    components: {
-      "title-bar": TitleBar
-    }
+import TitleBar from "./components/TitleBar";
+export default {
+  name: "app",
+  components: {
+    "title-bar": TitleBar
   }
+};
 </script>
 
 <style lang="stylus">
